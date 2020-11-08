@@ -2,27 +2,27 @@
 
 ## Promotion Cybersécurité du Logiciel 2020-2023
 
-## Fonctionnement
+## How it works
 
 `python3 ProjetLabyrinthe.py`
 
-Le programme renvoie une image du labyrinthe nommée Labyrinthe.png.
+Program returns a picture of the maze named "Maze.png".
 
-La cellule rouge correspond au point d'arrivé, les cellules noires aux murs et les cellules blanches aux chemins.
+The red cell corresponds to the goal, black cells to walls and white cells to paths.
 
-L'utilisateur peut se déplacer en 8.
+The user can move from one cell to another horizontally, vertically and diagonally.
 
 ## Benchmark
 
-Le programme de benchmark est inclus dans l'archive zip. Pour l'exécuter, il suffit de faire `python3 benchmark.py`.
+The program used to do the benchmark is included in the zip archive. To execute it, simply write `python3 benchmark.py`.
 
-L = Largeur
+L = Length
 
-l = longueur
+w = width
 
-N = Nombre de cellules
+N = Number of cells
 
-| L | l   |N      | Temps | N/Temps|
+| L | w   |N      | Time  | N/Time |
 |---|-----|-------|-------|--------|
 |5  |5    |25     |0.0020s|12500   |
 |25 |25   |625    |0.0560s|11160   |
@@ -38,21 +38,23 @@ N = Nombre de cellules
 |750|750  |562500 |51.054s|11017   |
 |1000|1000|1000000|90.844s|11008   |
 
-En comparant ces résultats avec un autre étudiant qui n'a pas utilisé numpy, nous nous rendons compte que nos temps de générations sont largement supérieurs.
+Comparing these results with another student who didn't use numpy, we can see that our generating times are far more longer.
 
-Cela est notamment dû lors de la vérification des voisins. En effet, numpy.sum() est beaucoup plus lent que sum() pour des listes.
+This is due when we are checking for neighbors. Indeed, numpy.sum() is way more slower than sum() for lists.
 
 
-![alt text](https://i.ibb.co/PgDhr9R/np.png "Graphe vitesse")
 
-Manquant de temps, j'ai décidé de rester sur cette solution avec numpy. Toutefois, cela peut rester intéressant si l'on souhaite comparer différents algorithmes.
+![alt text](https://i.ibb.co/PgDhr9R/np.png "Speed Graph")
 
-## Complexité
+Not having enough time left, I decided to stay with numpy. Even if our generation is slower, we can still keep it and compare with other algorithms.
 
-Après notre benchmark, lorsque nous comparons les valeures de N/temps, nous nous rendons compte que plus N augmente, moins nous possédons de différence.
 
-Nous en déduisons alors que notre programme possède une complexité égale à O(n).
+## Complexity
 
-## Auteur
+After our benchmark, when we compare the values of N/Time, we can see that whenever N gets big, we have a smaller gap between our values.
+
+We can say that our program has a complexity equal to O(n).
+
+## Author
 
 Friedrich Bär

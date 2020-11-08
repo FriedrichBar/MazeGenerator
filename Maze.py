@@ -110,7 +110,6 @@ def DFS(L, w):
     stack.append([startingCell[0], startingCell[1]])
     Maze[startingCell[0]][startingCell[1]] = 1
     # While the stack is not empty
-    start = time.time()
     while len(stack) != 0:
         # We take the last cell of the stack
         currentCell = stack[-1]
@@ -127,19 +126,4 @@ def DFS(L, w):
             # We avoid a IndexOutOfRange
             if len(stack) != 0:
                 currentCell = stack[-1]
-    print("L:",L,"w:",w,"N:",L*w,"Times:%s seconds" % (time.time()-start),"N/Temps:",(L*w)/(time.time()-start))
     return Maze, startingCell
-
-Maze, startingCell = DFS(5, 5)
-Maze, startingCell = DFS(25, 25)
-Maze, startingCell = DFS(50, 50)
-Maze, startingCell = DFS(75, 75)
-Maze, startingCell = DFS(100, 100)
-Maze, startingCell = DFS(150, 150)
-Maze, startingCell = DFS(175, 175)
-Maze, startingCell = DFS(200, 200)
-Maze, startingCell = DFS(250, 250)
-Maze, startingCell = DFS(300, 300)
-Maze, startingCell = DFS(500, 500)
-Maze, startingCell = DFS(750, 750)
-Maze, startingCell = DFS(1000, 1000)
