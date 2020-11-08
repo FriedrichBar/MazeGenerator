@@ -4,7 +4,7 @@
 
 ## How it works
 
-`python3 ProjetLabyrinthe.py`
+`python3 MazeProject.py`
 
 Program returns a picture of the maze named "Maze.png".
 
